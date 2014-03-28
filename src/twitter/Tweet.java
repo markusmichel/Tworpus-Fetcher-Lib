@@ -1,6 +1,5 @@
 package twitter;
 
-import java.util.Date;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 public class Tweet {
@@ -137,24 +136,6 @@ public class Tweet {
 	
 	public static String createUrl(long tweetId, long userId) {
 		return "http://twitter.com/" + userId + "/status/" + tweetId;
-	}
-	
-	public String getXML() {
-		StringBuilder builder = new StringBuilder();
-		builder.append(XML_HEADER+"\n");
-		builder.append("<tweet id=\""+getId()+"\">\n");
-		builder.append("<user id=\""+getUser_id()+"\">\n");
-		builder.append("<screenname>"+ StringEscapeUtils.escapeXml(getScreeenname()) +"</screenname>\n");
-		builder.append("<fullname>"+ StringEscapeUtils.escapeXml(getFullname()) +"</fullname>\n");
-		builder.append("</user>\n");
-		builder.append("<date>"+getDate()+"</date>\n");
-		builder.append("<retweets>"+getRetweets()+"</retweets>\n");
-		builder.append("<favoured>"+getFavoured()+"</favoured>\n");
-		builder.append("<text chars=\""+getCharCount()+"\" words=\""+getWordCount()+"\" lang=\""+getTweetlang()+"\">"
-                        + StringEscapeUtils.escapeXml(getText())
-                        +"</text>\n");
-		builder.append("</tweet>");
-		return builder.toString();
 	}
 	
 	public String toString() {

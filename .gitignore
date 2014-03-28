@@ -1,3 +1,7 @@
+test*/
+xmlcache/
+*.csv
+
 *.pydevproject
 .metadata
 .gradle

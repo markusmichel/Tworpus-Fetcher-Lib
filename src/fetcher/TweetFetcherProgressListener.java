@@ -4,9 +4,9 @@ import twitter.Tweet;
 
 public interface TweetFetcherProgressListener {
 
-	public void onProgressUpdate(long currentTweets, long allTweets, int id);
+	public void onProgressUpdate();
 	public void onStartDownloading();
-	public void onStopDownloading();
+	public void onStopDownloading(FetcherResult result);
 	public void onTweetNotExsitingError(Tweet tweet);
 	
 }
