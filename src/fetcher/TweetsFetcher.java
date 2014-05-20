@@ -138,8 +138,7 @@ public class TweetsFetcher  implements FileManagerUpdateListener, TweetFetcherPr
 		@Override
 		public void run() {
 	        try {
-	        	// @TODO: rename host to working server address
-				URL url = new URL("http://localhost:3000/api/v1/unavailable?tweetid=" + tweet.getId() + "&userid=" + tweet.getUser_id());
+				URL url = new URL("http://132.199.139.24:3000/api/v1/unavailable?tweetid=" + tweet.getId() + "&userid=" + tweet.getUser_id());
 				HttpURLConnection con = (HttpURLConnection) url.openConnection();
 				con.getInputStream();
 				
